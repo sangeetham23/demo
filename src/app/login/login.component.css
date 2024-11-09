@@ -1,0 +1,13 @@
+.App{
+    text-align: center;
+}
+
+.login_container__jKbA1 {
+    align-items: center;
+    background-image: url(/mcharge-app/src/assets/image.png);
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+}
