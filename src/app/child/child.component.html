@@ -1,0 +1,13 @@
+<div>
+    <h3>Child Component</h3>
+    <div>
+        <p>Parent to Child Communcation</p>
+        <p>Hello {{userName}}</p>
+    </div>
+    <div>
+        <p>Child to Parent Communication</p>
+        <button type="button" (click)="emit('msg from child')">send data to parent</button>
+        <p></p>
+    </div>
+</div>
+

@@ -1,0 +1,33 @@
+<h1>Parent Component</h1>
+
+<div>
+    <p>Child to Parent Communication</p>
+    <p>{{message}}</p>
+</div>
+
+<div>
+    <h2>String Interpolation</h2>
+    <p>Property binding: {{slogan}}</p>
+    <p>Type script Method: {{10+5}}</p>
+    <p>Calling Methods: {{getslogan()}}</p>
+</div>
+
+<div>
+    <h2>One way data binding</h2>
+    <div>
+        <h3>User Details</h3>
+        <input type="text" (input)="updateUserName($event)" placeholder="Enter your name">
+        <p>Your name is: {{ name }}</p>
+        <p> Property binding </p>
+        <input [value]="name" />
+    </div>
+</div>
+
+<div>
+    <h2>Two way data binding</h2>
+    <input type="text" [(ngModel)]="twoWayBinding" placeholder="Enter your name">
+    <p>Your name is: {{ twoWayBinding }}</p>
+</div>
+
+<app-child [userName]="userName" (notify)="msgFromChild($event)"></app-child>
+
