@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sanleo@1905
+      POSTGRES_DB: sample
+    ports:
+      - '5432:5432'
+
+  nest-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
