@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Directives
+=======
+# DataBinding
+>>>>>>> f7303095708e5b288179e255eca38f08778b9386
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
 

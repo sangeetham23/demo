@@ -3,7 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "directives": {
+=======
+    "data-binding": {
+>>>>>>> f7303095708e5b288179e255eca38f08778b9386
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +21,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+<<<<<<< HEAD
             "outputPath": "dist/directives",
+=======
+            "outputPath": "dist/data-binding",
+>>>>>>> f7303095708e5b288179e255eca38f08778b9386
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -67,10 +75,17 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "buildTarget": "directives:build:production"
             },
             "development": {
               "buildTarget": "directives:build:development"
+=======
+              "buildTarget": "data-binding:build:production"
+            },
+            "development": {
+              "buildTarget": "data-binding:build:development"
+>>>>>>> f7303095708e5b288179e255eca38f08778b9386
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +93,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+<<<<<<< HEAD
             "buildTarget": "directives:build"
+=======
+            "buildTarget": "data-binding:build"
+>>>>>>> f7303095708e5b288179e255eca38f08778b9386
           }
         },
         "test": {
@@ -104,6 +123,10 @@
     }
   },
   "cli": {
+<<<<<<< HEAD
     "analytics": "f8283ee0-e1e6-4ce0-a7ea-8f57381ed6ff"
+=======
+    "analytics": "e1610337-51bd-48c6-abe5-ab090133bef4"
+>>>>>>> f7303095708e5b288179e255eca38f08778b9386
   }
 }

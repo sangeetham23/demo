@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "directives",
+=======
+  "name": "data-binding",
+>>>>>>> f7303095708e5b288179e255eca38f08778b9386
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +11,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+<<<<<<< HEAD
     "serve:ssr:directives": "node dist/directives/server/server.mjs"
+=======
+    "serve:ssr:data-binding": "node dist/data-binding/server/server.mjs"
+>>>>>>> f7303095708e5b288179e255eca38f08778b9386
   },
   "private": true,
   "dependencies": {
