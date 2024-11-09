@@ -1,0 +1,65 @@
+<div class="container">
+    <h2 class="text-center">Contact Information</h2>
+    <form [formGroup]="contactForm">
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" class="form-control" formControlName="email">
+        <div *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)">
+          <small class="text-white" *ngIf="contactForm.get('email')?.errors?.['required']">Email is required.</small>
+          <small class="text-white" *ngIf="contactForm.get('email')?.errors?.['email']">Invalid email format.</small>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" class="form-control" formControlName="phone">
+        <div *ngIf="contactForm.get('phone')?.invalid && (contactForm.get('phone')?.dirty || contactForm.get('phone')?.touched)">
+          <small class="text-white" *ngIf="contactForm.get('phone')?.errors?.['required']">Phone number is required.</small>
+          <small class="text-white" *ngIf="contactForm.get('phone')?.errors?.['pattern']">Invalid phone number format.</small>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" class="form-control" formControlName="address">
+        <div *ngIf="contactForm.get('address')?.invalid && (contactForm.get('address')?.dirty || contactForm.get('address')?.touched)">
+          <small class="text-white" *ngIf="contactForm.get('address')?.errors?.['required']">Address is required.</small>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" class="form-control" formControlName="city">
+        <div *ngIf="contactForm.get('city')?.invalid && (contactForm.get('city')?.dirty || contactForm.get('city')?.touched)">
+          <small class="text-white" *ngIf="contactForm.get('city')?.errors?.['required']">City is required.</small>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="state">State/Province:</label>
+        <select id="state" class="form-control" formControlName="state">
+          <option value="">Select a state/province</option>
+          <option value="TamilNadu">TamilNadu</option>
+          <option value="Karnataka">Karnataka</option>
+        </select>
+        <div *ngIf="contactForm.get('state')?.invalid && (contactForm.get('state')?.dirty || contactForm.get('state')?.touched)">
+          <small class="text-white" *ngIf="contactForm.get('state')?.errors?.['required']">State/province is required.</small>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="zip">ZIP/Postal Code:</label>
+        <input type="text" id="zip" class="form-control" formControlName="zip">
+        <div *ngIf="contactForm.get('zip')?.invalid && (contactForm.get('zip')?.dirty || contactForm.get('zip')?.touched)">
+          <small class="text-white" *ngIf="contactForm.get('zip')?.errors?.['required']">ZIP/Postal code is required.</small>
+        </div>
+      </div>
+  
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary" (click)="onBack()">Back</button>
+        <button type="submit" class="btn btn-primary"  (click)="onNext()">Continue</button> <!-- [disabled]="contactForm.invalid"-->
+        <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+      </div>
+    </form>
+  </div>
+  

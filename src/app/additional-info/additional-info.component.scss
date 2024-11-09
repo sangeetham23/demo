@@ -1,0 +1,45 @@
+@import '../../backgroundColor.scss';
+
+.container{
+    background-color: $backGroundColor;
+    position: $position;
+    top: $top;
+    left: $left;
+    width: $width;
+    transform: $transform;
+  }
+
+
+  h2{
+    color: #fff;
+  }
+
+  label {
+    color: #072f31;
+  }
+
+  .text-danger{
+    color: #fff;
+  }
+
+  .button{
+    padding: 10px;
+  }
+
+  .btn-primary {
+    background-color: #006064; /* Primary button background color */
+    border-color: #006064; /* Primary button border color */
+    margin: 5px;
+  }
+  
+  .btn-secondary{
+    background-color: #E0F2F1;
+    border-color: #E0F2F1;
+    color: #000000;
+  }
+  
+  .btn-primary:hover {
+    background-color: #004D40; /* Primary button hover background color */
+    border-color: #004D40; /* Primary button hover border color */
+  }
+  

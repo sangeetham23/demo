@@ -1,0 +1,74 @@
+<div class="container">
+    <h2 class="text-center">Personal Information</h2>
+    <form [formGroup]="form"> <!-- (ngSubmit)="onSubmit()"-->
+      <div class="form-group">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" class="form-control" formControlName="fname">
+        <div *ngIf="form.get('fname')?.invalid && (form.get('fname')?.dirty || form.get('fname')?.touched)">
+          <small class="text-white" *ngIf="form.get('fname')?.errors?.['required']">First Name is required.</small>
+          <small class="text-white" *ngIf="form.get('fname')?.errors?.['pattern']">First Name must be in alphabets.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" class="form-control" formControlName="lname">
+        <div *ngIf="form.get('lname')?.invalid && (form.get('lname')?.dirty || form.get('lname')?.touched)">
+          <small class="text-white" *ngIf="form.get('lname')?.errors?.['required']">Last Name is required.</small>
+          <small class="text-white" *ngIf="form.get('lname')?.errors?.['pattern']">Last Name must be in alphabets.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="text" id="dob" class="form-control" formControlName="dob">
+        <div *ngIf="form.get('dob')?.invalid && (form.get('dob')?.dirty || form.get('dob')?.touched)">
+          <small class="text-white" *ngIf="form.get('dob')?.errors?.['required']">Date of Birth Name is required.</small>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" id="age" class="form-control" formControlName="age">
+        <div *ngIf="form.get('age')?.invalid && (form.get('age')?.dirty || form.get('age')?.touched)">
+          <small class="text-white" *ngIf="form.get('age')?.errors?.['required']">Age is required.</small>
+          <small class="text-white" *ngIf="form.get('age')?.errors?.['pattern']">Age must be a number.</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="form-check-input">Select Gender:</label>
+        <div class="form-check">
+          <input type="radio" id="male" class="form-check-input" formControlName="gender" value="male" >
+          <label for="male" class="form-check-label">Male</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="female" class="form-check-input" formControlName="gender" value="female" >
+          <label for="female" class="form-check-label">Female</label>
+        </div>
+        <div *ngIf="form.get('gender')?.invalid && (form.get('gender')?.dirty || form.get('gender')?.touched)">
+          <small class="text-white">Gender is required.</small>
+        </div>
+      </div>
+
+  
+      <div class="form-group">
+        <label for="nationality">Nationality:</label>
+        <select id="nationality" class="form-control" formControlName="nationality">
+          <option value="">Select a city</option>
+          <option value="New York">New York</option>
+          <option value="Los Angeles">Los Angeles</option>
+          <option value="Chicago">Chicago</option>
+        </select>
+        <div *ngIf="form.get('nationality')?.invalid && (form.get('nationality')?.dirty || form.get('nationality')?.touched)">
+          <small class="text-white" *ngIf="form.get('nationality')?.errors?.['required']">City is required.</small>
+        </div>
+      </div>
+  
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary"  (click)="onNext()" >Continue</button> <!--[disabled]="form.invalid"-->
+        <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+      </div>
+    </form>
+  </div>
+  
